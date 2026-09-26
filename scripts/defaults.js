@@ -13,7 +13,6 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			group.listName ?? group.name
 		)}`;
 	});
-	const groupsArray = Object.values(groups);
 	DEFAULTS = {
 		layout: [
 			{

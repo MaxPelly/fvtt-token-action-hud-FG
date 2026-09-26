@@ -1,7 +1,3 @@
-// System Module Imports
-import {ACTION_TYPE} from "./constants.js";
-import {Utils} from "./utils.js";
-
 export let ActionHandler = null;
 
 Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
@@ -14,7 +10,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 		 * Called by Token Action HUD Core
 		 * @override
 		 * @param {array} groupIds
-		 */ a;
+		 */
 		async buildSystemActions(groupIds) {
 			// Set actor and token variables
 			this.actorType = this.actor?.type;

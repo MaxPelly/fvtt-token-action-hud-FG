@@ -24,13 +24,18 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			const actionTypeId = payload[0];
 			const actionId = payload[1];
 
-			const renderable = ["attribute"];
+			const renderable = [
+				"weapon",
+				"active",
+				"passive",
+				"development",
+				"maneuver",
+				"word",
+			];
 
 			if (renderable.includes(actionTypeId) && this.isRenderItem()) {
-				return this.doRenderItem(this.actor, actionId);
+				return this.renderItem(this.actor, actionId);
 			}
-
-			const knownCharacters = ["fisher", "fish"];
 
 			// If single actor is selected
 			if (this.actor) {
@@ -130,13 +135,13 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 					this.#handleNarrativeRoll(actor);
 					break;
 				case "injuryRoll":
-					this.#handleInjuryRoll();
+					this.#handleInjuryRoll(actor);
 					break;
 				case "touchRoll":
-					this.#handleTouchRoll();
+					this.#handleTouchRoll(actor);
 					break;
 				case "meltdownRoll":
-					this.#handleMeltdownRoll();
+					this.#handleMeltdownRoll(actor);
 					break;
 				case "repairCost":
 					this.#handleRepairCost(actor);
@@ -237,16 +242,16 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			game.hudActions?.rollNarrative(actor);
 		}
 
-		async #handleInjuryRoll() {
-			game.rollTables?.rollInjury();
+		async #handleInjuryRoll(actor) {
+			game.rollTables?.rollInjury(actor);
 		}
 
-		async #handleTouchRoll() {
-			game.rollTables?.rollTouch();
+		async #handleTouchRoll(actor) {
+			game.rollTables?.rollTouch(actor);
 		}
 
-		async #handleMeltdownRoll() {
-			game.rollTables?.rollMeltdown();
+		async #handleMeltdownRoll(actor) {
+			game.rollTables?.rollMeltdown(actor);
 		}
 
 		async #handleRepairCost(actor) {
