@@ -1,35 +1,48 @@
-![Downloads](https://img.shields.io/github/downloads/Larkinabout/fvtt-token-action-hud-template/latest/module.zip?color=2b82fc&label=DOWNLOADS&style=for-the-badge) [![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Ftoken-action-hud-template&colorB=448d34&style=for-the-badge)](https://forge-vtt.com/bazaar#package=token-action-hud-template)
+# Token Action HUD - Fathomless Gears
 
-# Token Action HUD Template
+> [!IMPORTANT]
+> **This module's Foundry v13/v14 compatibility update - including this readme - was implemented by an AI coding agent (Claude Code), not a human contributor.** Every change was reviewed step-by-step against the real `token-action-hud-core` and `fathomlessgears` source as work progressed (see [`documentation/`](documentation/) for the full plan and dev log), but **no live Foundry client was available to actually run the module during development**, so nothing here has been smoke-tested in a real game yet. Please test carefully before relying on it, and report anything unexpected via [Issues](https://github.com/MaxPelly/fvtt-token-action-hud-FG/issues).
 
-Token Action HUD is a repositionable HUD of actions for a selected token.
+Token Action HUD - Fathomless Gears is the [Token Action HUD](https://foundryvtt.com/packages/token-action-hud-core) integration for the [Fathomless Gears](https://github.com/MaxPelly/fathomlessgears) Foundry VTT system: a repositionable HUD of actions for a selected token, built around Fathomless Gears' attributes, internals, maneuvers, deep words, and utility actions.
 
 ![Token Action HUD](.github/readme/token-action-hud.gif)
 
 # Features
-- Make rolls directly from the HUD instead of opening your character sheet.
-- Use items from the HUD or right-click an item to open its sheet.
+- Roll attributes, use internals (weapons, active, passive), and trigger maneuvers or deep words directly from the HUD instead of opening the character sheet.
+- Right-click an internal, maneuver, or deep word action to open its item sheet.
 - Move the HUD and choose to expand the menus up or down.
 - Unlock the HUD to customise layout and groups per user, and actions per actor.
-- Add your own macros, journal entries and roll table compendiums.
+- Quick access to Injury, Touch of the Deep, and Meltdown roll tables, narrative checks, and GM-only utility actions (ballast tokens, weight totals).
+
+# Compatibility
+
+|              | Foundry VTT | Fathomless Gears | Token Action HUD Core |
+|--------------|-------------|-------------------|------------------------|
+| **Minimum**  | 13.351      | 2.0.0              | 2.1.0                  |
+| **Verified** | 14.368      | 2.0.0              | 2.1.2                  |
+
+Foundry v12 is no longer supported as of this module's 1.0.0 release. If you're still running Fathomless Gears on Foundry v12, stay on this module's 0.6.x line.
 
 # Installation
+
+This module is bundled with the Fathomless Gears system, so most users won't need to install it separately.
 
 ## Method 1
 1. On Foundry VTT's **Configuration and Setup** screen, go to **Add-on Modules**
 2. Click **Install Module**
-3. Search for **Token Action HUD Pathfinder 2** 
+3. Search for **Token Action HUD FG**
 4. Click **Install** next to the module listing
 
 ## Method 2
 1. On Foundry VTT's **Configuration and Setup** screen, go to **Add-on Modules**
 2. Click **Install Module**
-3. In the Manifest URL field, paste: `https://github.com/Larkinabout/fvtt-token-action-hud-template/releases/latest/download/module.json`
+3. In the Manifest URL field, paste: `https://github.com/MaxPelly/fvtt-token-action-hud-FG/releases/latest/download/module.json`
 4. Click **Install** next to the pasted Manifest URL
 
 ## Required Modules
 
-**IMPORTANT** - Token Action HUD Template requires the [Token Action HUD Core](https://foundryvtt.com/packages/token-action-hud-core) module to be installed.
+- [Token Action HUD Core](https://foundryvtt.com/packages/token-action-hud-core) - **required**.
+- The [Fathomless Gears](https://github.com/MaxPelly/fathomlessgears) Foundry VTT system - **required**.
 
 ## Recommended Modules
 Token Action HUD uses the [Color Picker](https://foundryvtt.com/packages/color-picker) library module for its color picker settings.
@@ -38,13 +51,9 @@ Token Action HUD uses the [Color Picker](https://foundryvtt.com/packages/color-p
 
 For a guide on using Token Action HUD, go to: [How to Use Token Action HUD](https://github.com/Larkinabout/fvtt-token-action-hud-core/wiki/How-to-Use-Token-Action-HUD)
 
-For questions, feature requests or bug reports, please open an issue [here](https://github.com/Larkinabout/fvtt-token-action-hud-core/issues).
+For questions, feature requests, or bug reports specific to the Fathomless Gears integration, please open an issue [here](https://github.com/MaxPelly/fvtt-token-action-hud-FG/issues).
 
 Pull requests are welcome. Please include a reason for the request or create an issue before starting one.
-
-# Acknowledgements
-
-Thank you to the Community Helpers on Foundry's Discord who provide tireless support for people seeking help with the HUD.
 
 # License
 
