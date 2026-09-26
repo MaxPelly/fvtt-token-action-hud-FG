@@ -2,14 +2,14 @@
  * Module-based constants
  */
 export const MODULE = {
-	ID: "token-action-hud-FG",
+	ID: "token-action-hud-FG"
 };
 
 /**
  * Core module
  */
 export const CORE_MODULE = {
-	ID: "token-action-hud-core",
+	ID: "token-action-hud-core"
 };
 
 /**
@@ -24,7 +24,7 @@ export const ACTION_TYPE = {
 	attribute: "tokenActionHud.attribute",
 	weapon: "tokenActionHud.weapon",
 	active: "tokenActionHud.active",
-	development: "tokenActionHud.development",
+	development: "tokenActionHud.development"
 };
 
 export const ATTRIBUTES = {
@@ -38,7 +38,7 @@ export const ATTRIBUTES = {
 	sensors: "sensors",
 	weight: "weight",
 	baseAP: "baseAP",
-	ballast: "ballast",
+	ballast: "ballast"
 };
 
 /**
@@ -48,36 +48,36 @@ export const GROUP = {
 	attribute: {
 		id: "attribute",
 		name: "tokenActionHud.active",
-		type: "system",
+		type: "system"
 	},
 	weapon: {
 		id: "weapon",
 		name: "tokenActionHud.weapon",
-		type: "system",
+		type: "system"
 	},
 	active: {
 		id: "active",
 		name: "tokenActionHud.active",
-		type: "system",
+		type: "system"
 	},
 	development: {
 		id: "development",
 		name: "tokenActionHud.development",
-		type: "system",
+		type: "system"
 	},
 	maneuver: {
 		id: "maneuver",
 		name: "tokenActionHud.maneuver",
-		type: "system",
+		type: "system"
 	},
 	word: {
 		id: "word",
 		name: "tokenActionHud.word",
-		type: "system",
+		type: "system"
 	},
 	utils: {
 		id: "utils",
 		name: "tokenActionHud.util",
-		type: "system",
-	},
+		type: "system"
+	}
 };

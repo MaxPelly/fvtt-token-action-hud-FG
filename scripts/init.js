@@ -8,7 +8,7 @@ Hooks.on("tokenActionHudCoreApiReady", async () => {
 	const module = game.modules.get(MODULE.ID);
 	module.api = {
 		requiredCoreModuleVersion: REQUIRED_CORE_MODULE_VERSION,
-		SystemManager,
+		SystemManager
 	};
 	Hooks.call("tokenActionHudSystemReady", module);
 });

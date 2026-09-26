@@ -11,7 +11,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 		 * @override
 		 * @param {array} groupIds
 		 */
-		async buildSystemActions(groupIds) {
+		async buildSystemActions(_groupIds) {
 			// Set actor and token variables
 			this.actorType = this.actor?.type;
 
@@ -55,7 +55,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.attribute"
 				),
-				type: "system",
+				type: "system"
 			};
 
 			// Get actions
@@ -70,7 +70,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 					actions.push({
 						id,
 						name,
-						encodedValue,
+						encodedValue
 					});
 				}
 			}
@@ -123,7 +123,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			const groupData = {
 				id: "weapon",
 				name: game.i18n.localize("INTERNALS.weapons"),
-				type: "system",
+				type: "system"
 			};
 
 			// Get actions
@@ -135,7 +135,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				actions.push({
 					id,
 					name,
-					encodedValue,
+					encodedValue
 				});
 			});
 			this.addActions(actions, groupData);
@@ -150,7 +150,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			const groupData = {
 				id: "active",
 				name: game.i18n.localize("INTERNALS.active"),
-				type: "system",
+				type: "system"
 			};
 
 			// Get actions
@@ -162,7 +162,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				actions.push({
 					id,
 					name,
-					encodedValue,
+					encodedValue
 				});
 			});
 			this.addActions(actions, groupData);
@@ -177,7 +177,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			const groupData = {
 				id: "passive",
 				name: game.i18n.localize("INTERNALS.passive"),
-				type: "system",
+				type: "system"
 			};
 
 			// Get actions
@@ -189,7 +189,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				actions.push({
 					id,
 					name,
-					encodedValue,
+					encodedValue
 				});
 			});
 			this.addActions(actions, groupData);
@@ -202,7 +202,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.frame"
 				),
-				type: "system",
+				type: "system"
 			};
 
 			// Get actions
@@ -222,7 +222,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.encounter"
 				),
-				type: "system",
+				type: "system"
 			};
 			let actions = [];
 			let actionIds = [];
@@ -240,13 +240,13 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.narrative"
 				),
-				type: "system",
+				type: "system"
 			};
 			actionIds = [
 				"narrativeRoll",
 				"injuryRoll",
 				"touchRoll",
-				"repairCost",
+				"repairCost"
 			];
 			actions = actionIds.map((action) =>
 				this.constructAction(actionTypeId, action)
@@ -260,7 +260,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 					name: game.i18n.localize(
 						"tokenActionHud.fathomlessgears.utility"
 					),
-					type: "system",
+					type: "system"
 				};
 				actionIds = ["ballastTokens"];
 				actions = actionIds.map((action) =>
@@ -275,7 +275,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.other"
 				),
-				type: "system",
+				type: "system"
 			};
 			actionIds = ["reelCheck", "scanAction"];
 			actionIds = actionIds.concat(["slip", "scrub", "transferLine"]);
@@ -290,7 +290,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.attacks"
 				),
-				type: "system",
+				type: "system"
 			};
 			actionIds = ["bash"];
 			actionIds = actionIds.concat(["wrangle", "push", "intimidate"]);
@@ -310,7 +310,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.development"
 				),
-				type: "system",
+				type: "system"
 			};
 			let actions = [];
 			for (let item of this.items["development"]) {
@@ -320,7 +320,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				actions.push({
 					id,
 					name,
-					encodedValue,
+					encodedValue
 				});
 			}
 			if (actions.length > 0) this.addActions(actions, groupData);
@@ -333,7 +333,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.maneuver"
 				),
-				type: "system",
+				type: "system"
 			};
 			let actions = [];
 			for (let item of this.items["maneuver"]) {
@@ -343,7 +343,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				actions.push({
 					id,
 					name,
-					encodedValue,
+					encodedValue
 				});
 			}
 			if (actions.length > 0) this.addActions(actions, groupData);
@@ -360,7 +360,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.encounter"
 				),
-				type: "system",
+				type: "system"
 			};
 			let actionIds = ["scanThis", "clearAllConditions"];
 			let actions = actionIds.map((action) =>
@@ -376,7 +376,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.utility"
 				),
-				type: "system",
+				type: "system"
 			};
 			actionIds = ["weightTotal", "ballastTokens"];
 			actions = actionIds.map((action) =>
@@ -390,7 +390,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.attacks"
 				),
-				type: "system",
+				type: "system"
 			};
 			actionIds = ["reelCheck", "bash", "threatDisplay"];
 			actions = actionIds.map((action) =>
@@ -410,7 +410,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.utility"
 				),
-				type: "system",
+				type: "system"
 			};
 			let actionIds = ["weightTotal", "ballastTokens"];
 			let actions = actionIds.map((action) =>
@@ -424,7 +424,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			let groupData = {
 				id: "word",
 				name: game.i18n.localize("tokenActionHud.fathomlessgears.word"),
-				type: "system",
+				type: "system"
 			};
 			let actions = [];
 			for (let item of this.items["deep_word"]) {
@@ -434,7 +434,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				actions.push({
 					id,
 					name,
-					encodedValue,
+					encodedValue
 				});
 			}
 			if (actions.length > 0) this.addActions(actions, groupData);

@@ -29,7 +29,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.attribute"
 						),
 						type: "system",
-						nestId: "basic_attribute",
+						nestId: "basic_attribute"
 					},
 					{
 						id: "attacks",
@@ -37,7 +37,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.attacks"
 						),
 						type: "system",
-						nestId: "basic_attacks",
+						nestId: "basic_attacks"
 					},
 					{
 						id: "other",
@@ -45,9 +45,9 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.other"
 						),
 						type: "system",
-						nestId: "basic_other",
-					},
-				],
+						nestId: "basic_other"
+					}
+				]
 			},
 			{
 				nestId: "internal",
@@ -61,19 +61,19 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 						id: "weapon",
 						name: game.i18n.localize("INTERNALS.weapons"),
 						type: "system",
-						nestId: "internal_weapon",
+						nestId: "internal_weapon"
 					},
 					{
 						id: "active",
 						name: game.i18n.localize("INTERNALS.active"),
 						type: "system",
-						nestId: "internal_active",
+						nestId: "internal_active"
 					},
 					{
 						id: "passive",
 						name: game.i18n.localize("INTERNALS.passive"),
 						type: "system",
-						nestId: "internal_passive",
+						nestId: "internal_passive"
 					},
 					{
 						id: "frame",
@@ -81,9 +81,9 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.frame"
 						),
 						type: "system",
-						nestId: "internal_frame",
-					},
-				],
+						nestId: "internal_frame"
+					}
+				]
 			},
 			{
 				nestId: "fisher",
@@ -99,7 +99,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.development"
 						),
 						type: "system",
-						nestId: "fisher_development",
+						nestId: "fisher_development"
 					},
 					{
 						id: "maneuver",
@@ -107,7 +107,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.maneuver"
 						),
 						type: "system",
-						nestId: "fisher_maneuver",
+						nestId: "fisher_maneuver"
 					},
 					{
 						id: "word",
@@ -115,9 +115,9 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.word"
 						),
 						type: "system",
-						nestId: "fisher_word",
-					},
-				],
+						nestId: "fisher_word"
+					}
+				]
 			},
 			{
 				nestId: "standard",
@@ -133,9 +133,9 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.standard"
 						),
 						type: "system",
-						nestId: "standard_standard",
-					},
-				],
+						nestId: "standard_standard"
+					}
+				]
 			},
 			{
 				nestId: "utility",
@@ -151,7 +151,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.encounter"
 						),
 						type: "system",
-						nestId: "utility_encounter",
+						nestId: "utility_encounter"
 					},
 					{
 						id: "narrative",
@@ -159,7 +159,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.narrative"
 						),
 						type: "system",
-						nestId: "utility_narrative",
+						nestId: "utility_narrative"
 					},
 					{
 						id: "utility",
@@ -167,10 +167,10 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 							"tokenActionHud.fathomlessgears.utility"
 						),
 						type: "system",
-						nestId: "utility_utility",
-					},
-				],
-			},
+						nestId: "utility_utility"
+					}
+				]
+			}
 		],
 		groups: [
 			{
@@ -178,37 +178,37 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.attribute"
 				),
-				type: "system",
+				type: "system"
 			},
 			{
 				id: "weapon",
 				name: game.i18n.localize("INTERNALS.weapons"),
-				type: "system",
+				type: "system"
 			},
 			{
 				id: "active",
 				name: game.i18n.localize("INTERNALS.active"),
-				type: "system",
+				type: "system"
 			},
 			{
 				id: "passive",
 				name: game.i18n.localize("INTERNALS.passive"),
-				type: "system",
+				type: "system"
 			},
 			{
 				id: "utility",
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.utility"
 				),
-				type: "system",
+				type: "system"
 			},
 			{
 				id: "standard",
 				name: game.i18n.localize(
 					"tokenActionHud.fathomlessgears.standard"
 				),
-				type: "system",
-			},
-		],
+				type: "system"
+			}
+		]
 	};
 });

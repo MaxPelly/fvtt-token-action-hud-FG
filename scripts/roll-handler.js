@@ -30,7 +30,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 				"passive",
 				"development",
 				"maneuver",
-				"word",
+				"word"
 			];
 
 			if (renderable.includes(actionTypeId) && this.isRenderItem()) {
@@ -65,7 +65,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 		 * @param {string} actionTypeId The action type id
 		 * @param {string} actionId     The actionId
 		 */
-		async #handleAction(event, actor, token, actionTypeId, actionId) {
+		async #handleAction(event, actor, _token, actionTypeId, actionId) {
 			switch (actionTypeId) {
 				case "attribute":
 					this.#handleRollAction(event, actor, actionId);
@@ -106,15 +106,15 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 		 * @param {object} actor    The actor
 		 * @param {string} attributeKey The attribute to trigger
 		 */
-		#handleRollAction(event, actor, attributeKey) {
+		#handleRollAction(_event, actor, attributeKey) {
 			game.rollHandler.startRollDialog(actor, attributeKey);
 		}
 
-		#handleItem(event, actor, itemId) {
+		#handleItem(_event, actor, itemId) {
 			actor.postItem(itemId);
 		}
 
-		#handleUtils(event, actor, actionId) {
+		#handleUtils(_event, actor, actionId) {
 			switch (actionId) {
 				case "scanThis":
 					actor.toggleScan();
@@ -154,7 +154,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			}
 		}
 
-		#handleBasic(event, actor, actionId) {
+		#handleBasic(_event, actor, actionId) {
 			switch (actionId) {
 				case "reelCheck":
 					game.rollHandler.startRollDialog(
@@ -179,7 +179,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			}
 		}
 
-		#handleBasicAttacks(event, actor, actionId) {
+		#handleBasicAttacks(_event, actor, actionId) {
 			switch (actionId) {
 				case "bash":
 				case "wrangle":
@@ -215,7 +215,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
 			}
 		}
 
-		async #handleCollectiveAction(event, actionTypeId, actionId) {
+		async #handleCollectiveAction(_event, _actionTypeId, actionId) {
 			switch (actionId) {
 				case "weightTotal":
 					this.#handleWeightTotal();
